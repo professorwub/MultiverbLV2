@@ -1,0 +1,47 @@
+#ifndef multiverb_peg
+#define multiverb_peg
+
+
+#ifndef PEG_STRUCT
+#define PEG_STRUCT
+typedef struct {
+  float min;
+  float max;
+  float default_value;
+  char toggled;
+  char integer;
+  char logarithmic;
+} peg_data_t;
+#endif
+
+/* <http://www.profwubaudio.com/multiverb.html> */
+
+static const char p_uri[] = "http://www.profwubaudio.com/multiverb.html";
+
+enum p_port_enum {
+  p_revTimeLF,
+  p_revTimeHF,
+  p_dryGain,
+  p_wetGain,
+  p_stereoSep,
+  p_left_input,
+  p_right_input,
+  p_left_output,
+  p_right_output,
+  p_n_ports
+};
+
+static const peg_data_t p_ports[] = {
+  { 1, 5, 3, 0, 0, 0 }, 
+  { 0.5, 5, 1.5, 0, 0, 0 }, 
+  { -10, 20, 0, 0, 0, 0 }, 
+  { -10, 20, 0, 0, 0, 0 }, 
+  { 0, 100, 20, 0, 0, 0 }, 
+  { -3.40282e+38, 3.40282e+38, -3.40282e+38, 0, 0, 0 }, 
+  { -3.40282e+38, 3.40282e+38, -3.40282e+38, 0, 0, 0 }, 
+  { -3.40282e+38, 3.40282e+38, -3.40282e+38, 0, 0, 0 }, 
+  { -3.40282e+38, 3.40282e+38, -3.40282e+38, 0, 0, 0 }, 
+};
+
+
+#endif /* multiverb_peg */
