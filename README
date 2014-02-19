@@ -1,0 +1,6 @@
+This repo contains the source code for an LV2 plug-in called Multiverb. For a technical description, see the included PDF file.
+
+Note that the lv2-plugin library is required.
+
+Please note that Multiverb is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
